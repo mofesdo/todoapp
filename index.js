@@ -14,10 +14,8 @@ function clearList(){
 }
 
 function add(){
-    let list = document.querySelector("#list");
+    let ul = document.getElementById("list");
     let li = document.createElement("li");
-    li.textContent = document.querySelector("#task").value;
-    list.appendChild(li)
-    
-    console.log(list)
+    li.appendChild(document.createTextNode(`${document.querySelector("#task").value}`));
+    ul.appendChild(li)
 }
